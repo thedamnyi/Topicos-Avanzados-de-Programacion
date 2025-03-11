@@ -1,0 +1,35 @@
+package trabajo.con.swing;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class TrabajoConSwing {
+    public static void main(String[] args) {
+        JFrame F = new JFrame("Mouse Clocker");
+        F.setSize(300, 200);
+        F.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel p = new JPanel();
+        F.add(p);     
+        p.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("Mouse clicked at: " + e.getX() + ", " + e.getY());
+            }
+            @Override
+            public void mousePressed(MouseEvent e) {
+            }
+            @Override
+            public void mouseReleased(MouseEvent e) {
+            }
+            @Override
+            public void mouseEntered(MouseEvent e) {
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+            }
+        });
+        F.setVisible(true);
+    }
+}
